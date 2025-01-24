@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #101010;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagem{
+    margin-top: -10rem;
+    max-width: 400px;
+}
+
+.titulo{
+    position: relative;
+    margin-top: -5.5rem;
+    color: #fff;
+    font-size: 20px;
+}
+
+.titulo::after{
+    position: absolute;
+    content: '';
+    background-color: #6C63FF;
+    top: 4rem;
+    width: 6rem;
+    height: 3px;
+    bottom: 0;
+    left: 9.5rem;
+}
+
+.calculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.calculadora label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.inputs input{
+    padding-left: 0.5rem;
+    width: 7rem;
+    height: 2rem;
+    background: #3f3f46;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    transition: .4s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+
+.inputs input:focus{
+    outline: none;
+    border: 1px solid #fff;
+}
+
+
+#btn-calcular{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8rem;
+    width: 6rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+#btn-calcular:hover{
+    color: #fff;
+    background: #6C63FF;
+    box-shadow: 0px 2px 15px #6C63FF;
+}
+
+#btn-calcular:active{
+    transform: translateY(5px);
+    transition: 100ms;
+}
+
+.result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.result p{
+    color: #fff;
+    font-weight: 600;
+}
+
+.result span{
+    color: #6C63FF;
+    margin-left: 0.5rem;
+}
+
+.null{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.null p{
+    color: #fff;
+    font-weight: 600;
+}
+
+.info{
+    display: none;
+    position: relative;
+    top: 5rem;
+}
+
+.info p{
+    position: relative;
+    left: 8rem;
+    color: #fff;
+}
+
+.info a{
+    position: relative;
+    top: 1.8rem;
+    right: 14rem;
+    font-size: 15px;
+    color: #6C63FF;
+    text-decoration: none;
+}
+
+.info a:hover{
+    text-decoration: underline;
+}
+
+.info::after{
+    position: absolute;
+    content: '';
+    background-color: #3b3b3b;
+    top: -2rem;
+    width: 15rem;
+    height: 3px;
+    bottom: 0;
+    left: 7rem;
+}
+
+#creds{
+    position: fixed;
+    top: 54rem;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+#creds:hover{
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px){
+    .imagem{
+        position: relative;
+    }
+
+    .titulo{
+        width: 100;
+        height: 100%;
+        margin-left: rem;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .titulo::after{
+        top: 3.5rem;
+        left: 6.5rem;
+    }
+
+    .calculadora{
+        position: relative;
+        top: 1.5rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    #btn-calcular{
+        margin-top: 3rem;
+    }
+
+    .info{
+        height: 100%;
+        width: 100%;
+        top: 3rem;
+        font-size: 13px;
+    }
+
+    .info p{
+        left: 7.5rem;
+        white-space: nowrap;
+    }
+
+    .info a{
+        top: 1.5rem;
+        right: 12.5rem;
+        font-size: 14px;
+    }
+
+    .info::after{
+        left: 4.5rem;
+    }
+
+    #creds{
+       display: none;
+    }
+}
+
+
